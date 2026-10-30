@@ -1,0 +1,16 @@
+{
+  "name": "Bug Hunt by Stagbyte",
+  "short_name": "Bug Hunt",
+  "description": "Fight down through the forest as the Stagbyte stag, then come home and rebuild the Den.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F1511",
+  "theme_color": "#0F1511",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

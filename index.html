@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Only the game's own files may run or load. GitHub Pages cannot send
+         security headers, so the policy lives here. Inline styles are allowed
+         for the loading screen; SVG art is rasterised from data: URLs. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; media-src 'self' data: blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0F1511" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bug Hunt" />
+    <title>Bug Hunt · Stagbyte</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #080c09; overflow: hidden; -webkit-user-select: none; user-select: none; }
+      /* The game's box is exactly the phone's safe area, so the HUD never sits under a
+         notch or the home bar. Positioned rather than padded: the engine sizes to the box. */
+      #arena { position: fixed; touch-action: none;
+        top: env(safe-area-inset-top); right: env(safe-area-inset-right);
+        bottom: env(safe-area-inset-bottom); left: env(safe-area-inset-left); }
+      #arena canvas { display: block; }
+      #hint { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom)); text-align: center;
+        font: 600 13px/1.4 'Inter', system-ui, sans-serif; color: #7e8f63; pointer-events: none; transition: opacity .5s; }
+    </style>
+    <script type="module" crossorigin src="./assets/main-DMs4x7PS.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/stag-DeciOlQj.js">
+    <link rel="stylesheet" crossorigin href="./assets/stag-CjgpMIwT.css">
+  </head>
+  <body>
+    <div id="arena"></div>
+    <div id="hint">Drag anywhere to move · you attack automatically</div>
+  </body>
+</html>
